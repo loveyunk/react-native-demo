@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    hello React
+    <button id="btn">Button</button>
+  </div>
+</body>
+
+<script src="./vconsole.min.js"></script>
+<script>
+  var vconsole = new VConsole()
+
+  let oBtn = document.getElementById('btn')
+
+  oBtn.addEventListener('click', () => {
+    // document.location = "js://webview?type=aa";
+    document.location = 'http://www.baidu.com';
+  }, false)
+
+  // //========监听webview传递过来的数据
+  // window.document.addEventListener('message', function (textValue) {
+  //   let data = textValue.data;
+  //   //alert(data.split(',')[0])
+  //   document.getElementById('h1').innerHTML = data.split(',')[0];
+  //   document.getElementById('h2').innerHTML = data.split(',')[1];
+
+  // })
+  // //========给webview发送事件
+
+  // document.getElementById('h2').onclick = function () {
+  //   let name = 'a';
+  //   let name1 = 'b';
+  //   window.postMessage([name, name1]);
+  // }
+</script>
+
+</html>
